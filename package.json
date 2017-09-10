@@ -10,6 +10,10 @@
   "keywords": [],
   "author": "Tommy Kwan",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KwanMan/preact-tiny-atom.git"
+  },
   "peerDependencies": {
     "preact": "^8.2.5"
   },
