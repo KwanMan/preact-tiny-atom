@@ -46,9 +46,9 @@ const preact = require('preact')
 const { injectAtom } = require('preact-tiny-atom')
 
 const withAtom = injectAtom({
-  // Pass an array of key/computer pairs to grab from the state
+  // Pass an array of keys to grab from the top level state
   grab: ['counts'],
-  // Or an object or keys to compute
+  // Or an object of key/computer pairs to compute
   compute: {
     // Each computer will be given the atom state
     totalCount: state => state.counts.reduce((memo, nextCount) => {
