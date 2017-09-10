@@ -1,6 +1,6 @@
 {
   "name": "preact-tiny-atom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Integrate tiny atom into preact",
   "main": "dist/index.js",
   "scripts": {
