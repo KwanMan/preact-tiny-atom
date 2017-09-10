@@ -1,0 +1,12 @@
+{
+  "name": "preact-tiny-atom",
+  "version": "1.0.0",
+  "description": "Integrate tiny atom into preact",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
