@@ -1,6 +1,6 @@
 # preact-tiny-atom
 
-Integrate tiny atom into preact
+Integrate [tiny-atom](https://github.com/qubitproducts/tiny-atom) into [preact](https://github.com/developit/preact)
 
 ## Usage
 
