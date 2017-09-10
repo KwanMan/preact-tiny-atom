@@ -5,7 +5,11 @@ module.exports = ({ grab = [], compute = {} }) => {
     return (props, { atom }) => {
       const grabbed = grabValues(grab, atom)
       const computed = computeValues(compute, atom, props)
-      const allProps = Object.assign({}, props, grabbed, computed)
+      const allProps = {
+        ...props,
+        ...grabbed,
+        ...computed
+      }
       return preact.h(WrappedComponent, allProps)
     }
   }

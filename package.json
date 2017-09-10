@@ -2,8 +2,9 @@
   "name": "preact-tiny-atom",
   "version": "1.0.0",
   "description": "Integrate tiny atom into preact",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prepublish": "make build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +13,8 @@
   "peerDependencies": {
     "preact": "^8.2.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "buble": "^0.15.2"
+  }
 }
