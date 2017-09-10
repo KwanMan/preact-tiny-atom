@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Tommy Kwan",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "preact": "^8.2.5"
   },
