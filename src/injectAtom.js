@@ -1,4 +1,5 @@
 const preact = require('preact')
+const get = require('slapdash/src/get')
 
 module.exports = ({ grab = [], compute = {} }) => {
   return WrappedComponent => {
@@ -17,19 +18,21 @@ module.exports = ({ grab = [], compute = {} }) => {
 
 function grabValues (grab, atom) {
   const state = atom.get()
-  const grabbed = {}
-  grab.forEach(toGrab => {
+  return grab.reduce((grabbed, toGrab) => {
     grabbed[toGrab] = state[toGrab]
-  })
-  return grabbed
+    return grabbed
+  }, {})
 }
 
 function computeValues (compute, atom, props) {
   const state = atom.get()
-  const computed = {}
-  Object.keys(compute).forEach(key => {
+  return Object.keys(compute).reduce((computed, key) => {
     const computer = compute[key]
-    computed[key] = computer(state, props)
-  })
-  return computed
+    if (typeof computer === 'string') {
+      computed[key] = get(state, computer)
+    } else {
+      computed[key] = computer(state, props)
+    }
+    return computed
+  }, {})
 }

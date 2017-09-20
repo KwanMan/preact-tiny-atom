@@ -54,15 +54,18 @@ const withAtom = injectAtom({
     totalCount: state => state.counts.reduce((memo, nextCount) => {
       return memo + nextCount
     }, 0)
+    // Or you can pass in an object path string
+    firstCount: 'counts.0'
   }
 })
 
 // Everything will be passed into the props for your component
-const App = function App ({ counts, totalCount }) {
+const App = function App ({ counts, totalCount, firstCount }) {
   return (
     <div>
       <p>Counts: [{counts.join(', ')}]</p>
       <p>Total: {totalCount}</p>
+      <p>First Count: {firstCount}</p>
     </div>
   )
 }
